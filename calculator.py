@@ -1,5 +1,22 @@
 import sys
 from functools import reduce
+import os.path
+
+#username = input('Please enter username: ')
+#openfile = open('users.txt', 'a+')
+
+#users=[]
+#for user in openfile:
+    #user = user.split()
+    #users.append(user)
+
+#for names in users:
+    #if username in names:
+        #print('User {} exists: '.format(username))
+
+    #else:
+        #print('User {} does not exist: '.format(username))
+
 
 loop = 1
 while loop == 1:
@@ -44,8 +61,6 @@ while loop == 1:
                 print("division by zero not permitted!")
                 sys.exit()
 
-
-
     operation = input("Enter operation: ")
     if operation == '+' or '-' or '*' or '/':
             print("Please enter numbers: ")
@@ -78,5 +93,34 @@ while loop == 1:
         print("Invalid Input")
 
     next_calculation = input("Another calculation? (Y/N): ")
-    if next_calculation == "N":
-        sys.exit()
+    if next_calculation.upper() == "N":
+        break
+
+#open_file = open('calculation.txt', 'w')
+#sys.stdout = open_file
+
+#open_file.close()
+
+#f = open('calculation.txt', 'r')
+#for x in f:
+    #print(x)
+#f.close()
+
+#if os.path.isfile({username}'.txt') = True:
+    #file = open({username}'.txt','r+')
+    #file = sys.stdout
+    #print(file)
+
+#file.close()
+
+x = str(sys.stdout)
+openfile = open('calculation.txt', 'w')
+content = openfile.write(x)
+#for line in openfile:
+    #print(line, end="")
+print(content)
+openfile.close()
+
+
+
+
